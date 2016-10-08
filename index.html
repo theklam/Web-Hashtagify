@@ -22,7 +22,13 @@
           map: map,
           title: 'Hello World!'
         });
-
+      }
+      function moveMap() {
+        document.getElementById('map') =
+        new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 0, lng: 0},
+          zoom: 8
+        });
       }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnRTcfPOh2wcJM6XV9GSUozX9n6GYbcSE&callback=initMap"
@@ -35,6 +41,7 @@
     <button onclick="run(document.getElementById('imgurl').value);
                      placeImage(document.getElementById('imgurl').value);">
     Get tags!</button>
+    <button onclick="moveMap();">Move map!</button>
 </div>
 <div id="tags"></div>
 <div class="floatLeft" id="image">
