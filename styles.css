@@ -11,3 +11,6 @@ html, body {
         height: 400px;
         width: 500px;
       }
+      .floatLeft {
+        float:left;
+      }
