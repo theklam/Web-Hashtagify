@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
   <title>My first API</title>
+  <link rel="stylesheet" href="styles.css">
   <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
   <script type="text/javascript" src="keys.js"></script>
   <script type="text/javascript" src="index.js"></script>
+  <script>
+  var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnRTcfPOh2wcJM6XV9GSUozX9n6GYbcSE&callback=initMap"
+    async defer></script>
 </head>
 <body>
   <div>
@@ -12,5 +24,6 @@
     <button onclick="run(document.getElementById('imgurl').value)">Get tags!</button>
 </div>
 <div id="tags"></div>
+<div id="map"></div>
 </body>
 </html>
