@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Complimentify</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.0.1/trianglify.min.js"></script>
   <script type="text/javascript" src="keys.js"></script>
   <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="trianglify.js"></script>
   <script>
   var map;
   var lat = 42.391;
@@ -39,8 +42,7 @@
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnRTcfPOh2wcJM6XV9GSUozX9n6GYbcSE&callback=initMap"
     async defer></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-  <script src="dropzone.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
   <div>
@@ -55,5 +57,6 @@
   <img id="alpaca" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Rose_Hill_Farm_Alpaca_01.jpg">
 </div>
 <div class="floatLeft" id="map"></div>
+<div id="trianglify"></div>
 </body>
 </html>
