@@ -4,8 +4,8 @@
   <title>My first API</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
-  <script type="text/javascript" src="keys.js"></script>
-  <script type="text/javascript" src="index.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnRTcfPOh2wcJM6XV9GSUozX9n6GYbcSE&callback=initMap"
+    async defer></script>
   <script>
   var map;
       function initMap() {
@@ -14,16 +14,24 @@
           zoom: 8
         });
       }
+      function placeImage(imgurl) {
+        document.getElementById("image").innerHTML="<img src='http://kurld.com/images/wallpapers/alpaca/alpaca-16.jpg' />";
+      }
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnRTcfPOh2wcJM6XV9GSUozX9n6GYbcSE&callback=initMap"
-    async defer></script>
+  <script type="text/javascript" src="keys.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnRTcfPOh2wcJM6XV9GSUozX9n6GYbcSE&libraries=places">
+</script>
 </head>
 <body>
   <div>
     <input type="text" id="imgurl" placeholder="Image URL"/>
+    <button onclick="placeImage('http://kurld.com/images/wallpapers/alpaca/alpaca-16.jpg')">put alpaca img</button>
     <button onclick="run(document.getElementById('imgurl').value)">Get tags!</button>
 </div>
 <div id="tags"></div>
 <div id="map"></div>
+<div id="image"></div>
 </body>
 </html>
