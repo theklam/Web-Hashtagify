@@ -1215,11 +1215,11 @@ function parseResponse(resp) {
 //find the first adjective that occurs in the words from clarifai
 function findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives) {
   var adjFoundInList = false;
-  for each(var word in listOfWordsFromClarifai) {
-    for each(var adj in listOfAdjectives) {
-      if(word === adj) {
+  for(var i = 0; i < listOfWordsFromClarifai.length; i++) {
+    for(var j = 0; j < listOfAdjectives.length; j++) {
+      if(listOfWordsFromClarifai[i] === listOfAdjectives[j]) {
         adjFoundInList = true;
-        return word;
+        return listOfWordsFromClarifai[i];
       }
     }
   }
