@@ -21,7 +21,9 @@
 <body>
   <div>
     <input type="text" id="imgurl" placeholder="Image URL"/>
-    <button onclick="placeImage(document.getElementById('imgurl').value)">Get tags!</button>
+    <button onclick="run(document.getElementById('imgurl').value);
+                     placeImage(document.getElementById('imgurl').value);">
+                     Get tags!</button>
 </div>
 <div id="tags"></div>
 <div id="image">
