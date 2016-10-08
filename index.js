@@ -1,3 +1,8 @@
+function placeImage(imgurl) {
+  var imgLink = document.getElementById("imgurl").value;
+  document.getElementById("alpaca").src=imgLink;
+}
+
 function getCredentials(callbackFunction) {
   var data = {
     'grant_type': 'client_credentials',
