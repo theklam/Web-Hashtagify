@@ -70,7 +70,7 @@ function parseResponse(resp) {
     }
     var stringOfRelatedWords = tags.toString().replace(/,/g, ', ');
     document.getElementById('tags').innerHTML = stringOfRelatedWords;
-    var listOfWordsFromClarifai = stringOfRelatedWords.split(",");
+    var listOfWordsFromClarifai = stringOfRelatedWords.split(", ");
     var listOfAdjectives = [
         'aback',
         'abaft',
@@ -1206,6 +1206,12 @@ function parseResponse(resp) {
         'zippy',
         'zonked',
     ];
+    console.log("list of adjectives: " + listOfAdjectives);
+    console.log("list of words from clarifai: " + listOfWordsFromClarifai);
+    //console.log("first adjective, if one exists is: " + findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives));
+    //console.log("first adjective, if one exists is: " + findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives));
+    console.log(listOfWordsFromClarifai);
+    console.log("first adjective, if one exists is: " + findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives));
     document.getElementById('tags').innerHTML += "<br />Your picture is very, very, very " +
     findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives) + "!";
     //document.getElementById('tags').innerHTML.substring(0, document.getElementById('tags').innerHTML.indexOf(",")) + "!"
@@ -1216,8 +1222,11 @@ function parseResponse(resp) {
 function findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives) {
   var adjFoundInList = false;
   for(var i = 0; i < listOfWordsFromClarifai.length; i++) {
+    //console.log("word #" + (i+1) + " from clarifai: " + listOfWordsFromClarifai[i]);
     for(var j = 0; j < listOfAdjectives.length; j++) {
+      //console.log("word #" + (j+1) + " from adjectives: " + listOfAdjectives[j])
       if(listOfWordsFromClarifai[i] === listOfAdjectives[j]) {
+        console.log("found word!");
         adjFoundInList = true;
         return listOfWordsFromClarifai[i];
       }
