@@ -11,10 +11,17 @@
   var map;
   var lat = 42.391;
   var lng = -72.526;
+  var myLatLng = {lat: lat, lng: lng};
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: lat, lng: lng},
+          center: myLatLng,
           zoom: 8
+
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!';
+          });
         });
       }
   </script>
