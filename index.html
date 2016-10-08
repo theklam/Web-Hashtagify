@@ -10,24 +10,29 @@
   var map;
   var lat = 42.391;
   var lng = -72.526;
-  var myLatLng = {lat: lat, lng: lng};
+  var latLng = {lat: lat, lng: lng};
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatLng,
+          center: latLng,
           zoom: 8
         });
 
         var marker = new google.maps.Marker({
-          position: myLatLng,
+          position: latLng,
           map: map,
           title: 'Hello World!'
         });
       }
       function moveMap() {
+        var myLat = (Math.random() * 170) - 85;
+        var myLng = (Math.random() * 360) - 180;
+        var myLatLng = {lat: myLat, lng: myLng};
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 0, lng: 0},
+          // Google Maps max bounds: -85 to +85 for lat, -180 to +180 for long
+          center: myLatLng,
           zoom: 8
         });
+        console.log("hi, " + myLat + "\n" + myLng);
       }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnRTcfPOh2wcJM6XV9GSUozX9n6GYbcSE&callback=initMap"
