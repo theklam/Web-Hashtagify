@@ -14,7 +14,7 @@
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: latLng,
-          zoom: 8
+          zoom: 4
         });
 
         var marker = new google.maps.Marker({
@@ -24,13 +24,13 @@
         });
       }
       function moveMap() {
+        // Google Maps max bounds: -85 to +85 for lat, -180 to +180 for long
         var myLat = (Math.random() * 170) - 85;
         var myLng = (Math.random() * 360) - 180;
         var myLatLng = {lat: myLat, lng: myLng};
         map = new google.maps.Map(document.getElementById('map'), {
-          // Google Maps max bounds: -85 to +85 for lat, -180 to +180 for long
           center: myLatLng,
-          zoom: 8
+          zoom: 4
         });
         console.log("hi, " + myLat + "\n" + myLng);
       }

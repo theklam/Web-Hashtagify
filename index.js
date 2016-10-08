@@ -69,6 +69,8 @@ function parseResponse(resp) {
     console.log('Sorry, something is wrong.');
   }
   document.getElementById('tags').innerHTML = tags.toString().replace(/,/g, ', ');
+  document.getElementById('tags').innerHTML += "Your picture is very, very, very " +
+  document.getElementById('tags').innerHTML.substring(0, document.getElementById('tags').innerHTML.indexOf(",")) + "!"
   return tags;
 }
 
