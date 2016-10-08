@@ -16,13 +16,14 @@
         map = new google.maps.Map(document.getElementById('map'), {
           center: myLatLng,
           zoom: 8
-
-          var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'Hello World!';
-          });
         });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+
       }
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnRTcfPOh2wcJM6XV9GSUozX9n6GYbcSE&callback=initMap"
