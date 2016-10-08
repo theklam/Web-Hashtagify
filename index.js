@@ -68,10 +68,13 @@ function parseResponse(resp) {
   } else {
     console.log('Sorry, something is wrong.');
   }
-  document.getElementById('tags').innerHTML = tags.toString().replace(/,/g, ', ');
-  document.getElementById('tags').innerHTML += "Your picture is very, very, very " +
-  document.getElementById('tags').innerHTML.substring(0, document.getElementById('tags').innerHTML.indexOf(",")) + "!"
-  return tags;
+  var stringOfRelatedWords = tags.toString().replace(/,/g, ', ');
+  document.getElementById('tags').innerHTML = stringOfRelatedWords;
+  //document.getElementById('tags').innerHTML += "<br />Your picture is very, very, very " +
+  //document.getElementById('tags').innerHTML.substring(0, document.getElementById('tags').innerHTML.indexOf(",")) + "!"
+  var arrayOfRelatedWords = stringOfRelatedWords.split(",");
+  //console.log(arrayOfRelatedWords);
+  return stringOfRelatedWords;
 }
 
 function run(imgurl) {
