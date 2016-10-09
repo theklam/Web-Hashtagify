@@ -43,17 +43,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
-  <div>
-    <input type="text" id="imgurl" placeholder="Image URL"/>
-    <button onclick="run(document.getElementById('imgurl').value);
-                     placeImage(document.getElementById('imgurl').value);">
-    Get tags!</button>
-    <button onclick="moveMap();">Move map!</button>
-</div>
 <div id="tags"></div>
-<div class="floatLeft" id="image">
+<div class="col-sm-6" id="image">
   <img id="alpaca" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Rose_Hill_Farm_Alpaca_01.jpg">
 </div>
-<div class="floatLeft" id="map"></div>
+<div class="col-sm-6" id="map"></div>
+<div class = "col-sm-6">
+  <input type="text" id="imgurl" placeholder="Image URL"/>
+  <button onclick="run(document.getElementById('imgurl').value);
+                   placeImage(document.getElementById('imgurl').value);">
+  Get tags!</button>
+</div>
+<div class="col-sm-6">
+  <button onclick="moveMap();">Move map!</button>
+</div>
 </body>
 </html>
