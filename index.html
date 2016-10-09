@@ -11,18 +11,14 @@
   <script type="text/javascript" src="index.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>
-  $(document).ready(function(){
-  $("#image").click(function(){
-      $("#alpaca").animate({
-        opacity: 0.25,
-        left: '250px'});
-  });
-});
+  $(document).ready($("#alpaca").animate({
+    opacity: 0.25,
+    left: '250px'}));
   </script>
 </head>
 <body>
 <div class="col-sm-12" id="title">
-  <h1>I bet I can guess your animal!</h1>
+  <h1>I bet I can guess your animal! Pass in an image below ;)</h1>
 </div>
 <div class="col-sm-12" id="first_row">
   <div id="image">
