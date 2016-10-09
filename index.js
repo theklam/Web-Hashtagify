@@ -125,8 +125,7 @@ function parseResponse(resp) {
     //console.log("first adjective, if one exists is: " + findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives));
     console.log(listOfWordsFromClarifai);
     console.log("first adjective, if one exists is: " + findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives));
-    document.getElementById('tags').innerHTML = "You're a " +
-    findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives) + "! Am I right? :)";
+    document.getElementById('tags').innerHTML = findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives);
     //document.getElementById('tags').innerHTML.substring(0, document.getElementById('tags').innerHTML.indexOf(",")) + "!"
     return stringOfRelatedWords;
 }
@@ -141,12 +140,12 @@ function findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives) {
       if(listOfWordsFromClarifai[i] === listOfAdjectives[j].toLowerCase()) {
         console.log("found word!");
         adjFoundInList = true;
-        return listOfWordsFromClarifai[i];
+        return "You're a " + listOfWordsFromClarifai[i] + "! Am I right? :)";
       }
     }
   }
   if(adjFoundInList === false) {
-    return "cutesyerr";
+    return "C'mon that was a hard one!";
   }
 }
 
