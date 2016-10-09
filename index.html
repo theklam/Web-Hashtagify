@@ -41,21 +41,24 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnRTcfPOh2wcJM6XV9GSUozX9n6GYbcSE&callback=initMap"
     async defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#image").click(function(){
+      $("div").animate({left: '250px'});
+  });
+});
+  </script>
 </head>
 <body>
-<div class="col-sm-6" id="image">
+<div class="col-sm-12" id="image">
   <img id="alpaca" src="http://www.watershipalpacas.co.uk/images/portrait_Scolicite.png">
 </div>
-<div class="col-sm-6" id="map"></div>
 <div class = "col-sm-6">
   <input type="text" id="imgurl" placeholder="Image URL"/>
   <button onclick="run(document.getElementById('imgurl').value);
                    placeImage(document.getElementById('imgurl').value);">
   Go!</button>
   <div id="tags"></div>
-</div>
-<div class="col-sm-6">
-  <button onclick="moveMap();">Move map!</button>
 </div>
 </body>
 </html>
