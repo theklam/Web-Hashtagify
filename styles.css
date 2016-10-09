@@ -26,4 +26,9 @@ html, body {
         background-color: purple;
         display: inline-block;
       }
+
+      #title {
+        background-color: yellow;
+        padding: 40px;
+      }
 }
