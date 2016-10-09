@@ -69,7 +69,7 @@ function parseResponse(resp) {
         console.log('Sorry, something is wrong.');
     }
     var stringOfRelatedWords = tags.toString().replace(/,/g, ', ');
-    document.getElementById('tags').innerHTML = stringOfRelatedWords;
+    //document.getElementById('tags').innerHTML = stringOfRelatedWords;
     var listOfWordsFromClarifai = stringOfRelatedWords.split(", ");
     var listOfAdjectives = [
       "Aardvark","Albatross","Alligator","Alpaca","Ant",
@@ -125,8 +125,8 @@ function parseResponse(resp) {
     //console.log("first adjective, if one exists is: " + findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives));
     console.log(listOfWordsFromClarifai);
     console.log("first adjective, if one exists is: " + findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives));
-    document.getElementById('tags').innerHTML += "<br />Your picture is very, very, very " +
-    findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives) + "!";
+    document.getElementById('tags').innerHTML += "You're a " +
+    findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives) + "! Am I right? :)";
     //document.getElementById('tags').innerHTML.substring(0, document.getElementById('tags').innerHTML.indexOf(",")) + "!"
     return stringOfRelatedWords;
 }
