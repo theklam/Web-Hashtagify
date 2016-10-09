@@ -19,16 +19,16 @@ html, body {
         box-shadow: 8px 8px 10px #aaa;
       }
       #first_row {
-        background-color: black;
+        /*background-color: black;*/
       }
 
       #image {
-        background-color: purple;
+        /*background-color: purple;*/
         display: inline-block;
       }
 
-      #title {
-        background-color: yellow;
-        padding: 40px;
+      .title {
+        /*background-color: yellow;*/
+        padding: 35px;
       }
 }

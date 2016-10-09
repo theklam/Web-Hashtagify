@@ -125,7 +125,8 @@ function parseResponse(resp) {
     //console.log("first adjective, if one exists is: " + findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives));
     console.log(listOfWordsFromClarifai);
     console.log("first adjective, if one exists is: " + findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives));
-    document.getElementById('tags').innerHTML = findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives);
+    document.getElementById('tags').innerHTML = "<h1>" + findFirstAdjective(listOfWordsFromClarifai, listOfAdjectives);
+    + "</h1>"
     //document.getElementById('tags').innerHTML.substring(0, document.getElementById('tags').innerHTML.indexOf(",")) + "!"
     return stringOfRelatedWords;
 }
